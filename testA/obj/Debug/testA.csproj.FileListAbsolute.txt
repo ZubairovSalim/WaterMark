@@ -16,3 +16,9 @@ c:\users\mr.sali\documents\visual studio 2017\Projects\testA\testA\obj\Debug\wat
 c:\users\mr.sali\documents\visual studio 2017\Projects\testA\testA\obj\Debug\watermark_Image.baml
 c:\users\mr.sali\documents\visual studio 2017\Projects\testA\testA\obj\Debug\watermark_Text.g.cs
 c:\users\mr.sali\documents\visual studio 2017\Projects\testA\testA\obj\Debug\watermark_Text.baml
+C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\bin\Debug\Spire.Doc.dll
+C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\bin\Debug\Spire.License.dll
+C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\bin\Debug\Spire.Pdf.dll
+C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\bin\Debug\Microsoft.mshtml.dll
+C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\bin\Debug\Spire.Doc.xml
+C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\bin\Debug\Spire.License.xml

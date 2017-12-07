@@ -5,23 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testA"
         mc:Ignorable="d"
-        Title="watermark_Text" Height="400" Width="700">
+        Title="watermark_Text" Height="411" Width="600">
     <StackPanel Orientation="Horizontal" Margin="0,0,2,0">
         <StackPanel Orientation="Vertical" Width="200">
-            <StackPanel Orientation="Vertical">
-                <Button x:Name="btn_AddImage" Width="200" Click="btn_AddImage_Click">Добавить изображение</Button>
-            </StackPanel>
-            <Button x:Name="btn_Impose" Width="200" Click="btn_Impose_Click">Наложить</Button>
-        </StackPanel>
-        <StackPanel Orientation="Vertical">
+            <Button x:Name="btn_AddImage" Width="200" Click="btn_AddImage_Click">Добавить изображение</Button>
             <Label>Исходное изображение</Label>
-            <Image x:Name="img_Image" Height="200" Width="250"  Visibility="Visible"></Image>
+            <Image x:Name="img_Image" Height="150"  Visibility="Visible"/>
+            <StackPanel Orientation="Horizontal">
+                <Label>Прозрачность:</Label>
+                <TextBox x:Name="txb_Opacity" Margin="15,0,0,0" Width="90"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="0,0,5,0">Шрифт:</Label>
+                <TextBox x:Name="txb_Name" Margin="50,0,0,0" Width="90"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="0,0,5,0">Размер шрифта:</Label>
+                <TextBox x:Name="txb_Size" Margin="2,0,0,0" Width="90"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label>Цвет:</Label>
+                <Button x:Name="btn_CurrentColor" Margin="31,0,20,0" Width="15" Height="15" Background="Transparent"></Button>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="0,0,0,0" Width="15" Height="15" Background="Black" Click="btn_Color_Click"></Button>
+                        <Button Width="15" Height="15" Background="Gray" Click="btn_Color_Click"></Button>
+                        <Button Width="15" Height="15" Background="Red" Click="btn_Color_Click"></Button>
+                        <Button Width="15" Height="15" Background="Orange" Click="btn_Color_Click"></Button>
+                        <Button Width="15" Height="15" Background="Yellow" Click="btn_Color_Click"></Button>
+                        <Button Width="15" Height="15" Background="Green" Click="btn_Color_Click"></Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Width="15" Height="15" Background="BlueViolet" Click="btn_Color_Click"></Button>
+                        <Button Width="15" Height="15" Background="Pink" Click="btn_Color_Click"></Button>
+                        <Button Width="15" Height="15" Background="White" Click="btn_Color_Click"></Button>
+                        <Button Width="15" Height="15" Background="Brown" Click="btn_Color_Click"></Button>
+                        <Button Width="15" Height="15" Background="Aqua" Click="btn_Color_Click"></Button>
+                        <Button Width="15" Height="15" Background="Blue" Click="btn_Color_Click"></Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <Button x:Name="btn_Impose" Width="200" Margin="0,0,0,5" Click="btn_Impose_Click">Наложить</Button>
+            <Button x:Name="btn_Save" Width="200" Click="btn_Save_Click">Сохранить</Button>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="20,0,0,0" Width="362">
             <Label>Текстовый водяной знак</Label>
-            <TextBox x:Name="txb_Watermark" TextWrapping="Wrap" Height="114"></TextBox>
+            <TextBox x:Name="txb_Watermark" TextWrapping="Wrap" Height="30"></TextBox>
+            <Label Margin="0,0,0,0">Результат</Label>
+            <Image x:Name="img_Result" Height="281" Visibility="Visible" Margin="10,0" />
         </StackPanel>
-        <StackPanel>
-            <Label Margin="0,90,0,0">Результат</Label>
-            <Image x:Name="img_Result" Height="200"  Width="237" Visibility="Visible" ></Image>
-        </StackPanel>
+
     </StackPanel>
 </Window>

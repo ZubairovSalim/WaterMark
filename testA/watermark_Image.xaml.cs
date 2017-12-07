@@ -24,15 +24,12 @@ namespace testA
         private Bitmap DrawWatermark(Bitmap watermark_bm, Bitmap result_bm, int x, int y)
         {
             var bmp = new Bitmap(watermark_address);
-            var rect = new System.Drawing.Rectangle(0, 0, bmp.Width, bmp.Height);
+            var rect = new Rectangle(0, 0, bmp.Width, bmp.Height);
 
             var upgradedbmp = bmp.Clone(rect, PixelFormat.Format32bppArgb);
             bmp.Dispose();
 
             const byte ALPHA = 126;
-
-            MessageBox.Show(watermark_bm.GetPixel(0, 0).A.ToString());
-
 
             Color clr;
             for (int py = 0; py < upgradedbmp.Height; py++)
