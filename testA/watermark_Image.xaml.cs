@@ -15,6 +15,7 @@ namespace testA
     {
         string image_address = String.Empty;
         string watermark_address = String.Empty;
+        Bitmap result;
 
         public watermark_Image()
         {
@@ -29,7 +30,7 @@ namespace testA
             var upgradedbmp = bmp.Clone(rect, PixelFormat.Format32bppArgb);
             bmp.Dispose();
 
-            const byte ALPHA = 126;
+            byte ALPHA = Convert.ToByte(txb_Opacity.Text);
 
             Color clr;
             for (int py = 0; py < upgradedbmp.Height; py++)
@@ -40,8 +41,6 @@ namespace testA
                     upgradedbmp.SetPixel(px, py, Color.FromArgb(ALPHA, clr.R, clr.G, clr.B));
                 }
             }
-
-            MessageBox.Show(upgradedbmp.GetPixel(0, 0).A.ToString());
 
             upgradedbmp.MakeTransparent(upgradedbmp.GetPixel(0, 0));
 
@@ -102,12 +101,15 @@ namespace testA
             Bitmap image = new Bitmap(image_address);
             Bitmap watermark = new Bitmap(watermark_address);
 
-            Bitmap result = DrawWatermark(watermark, image, 0, 0);
+            result = DrawWatermark(watermark, image, Convert.ToInt32(txb_X.Text), Convert.ToInt32(txb_Y.Text));
 
             img_Result.Source = BitmapToImageSource(result);
 
-            img_Result.Visibility = Visibility.Visible;
+            img_Result.Visibility = Visibility.Visible;           
+        }
 
+        private void btn_Save_Click(object sender, RoutedEventArgs e)
+        {
             forms.SaveFileDialog save = new forms.SaveFileDialog();
 
             string result_adress;

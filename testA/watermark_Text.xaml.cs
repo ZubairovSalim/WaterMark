@@ -58,7 +58,6 @@ namespace testA
                 }
             }
             
-
             img_Result.Source = watermark_Image.BitmapToImageSource(BT);
         }
 

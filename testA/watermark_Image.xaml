@@ -5,26 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testA"
         mc:Ignorable="d"
-        Title="watermark_Image" Height="400" Width="700">
+        Title="watermark_Image" Height="437.782" Width="600">
     <StackPanel Orientation="Horizontal" Margin="0,0,2,0">
         <StackPanel Orientation="Vertical" Width="200">
-            <StackPanel Orientation="Vertical">
-                <Button x:Name="btn_AddImage" Width="200" Click="btn_AddImage_Click">Добавить изображение</Button>
-            </StackPanel>
-            <StackPanel Orientation="Vertical">
-                <Button x:Name="btn_AddWatermark" Width="200" Click="btn_AddWatermark_Click">Добавить водяной знак</Button>
-            </StackPanel>
-            <Button x:Name="btn_Impose" Width="200" Click="btn_Impose_Click">Наложить</Button>
-        </StackPanel>
-        <StackPanel Orientation="Vertical">
+            <Button x:Name="btn_AddImage" Width="200" Click="btn_AddImage_Click">Добавить изображение</Button>
             <Label>Исходное изображение</Label>
-            <Image x:Name="img_Image" Height="150" Width="250"  Visibility="Visible"></Image>
+            <Image x:Name="img_Image" Height="150" Visibility="Visible"></Image>
+            <Button x:Name="btn_AddWatermark" Width="200" Click="btn_AddWatermark_Click">Добавить водяной знак</Button>
             <Label>Цифровой водяной знак</Label>
-            <Image x:Name="img_Watermark" Height="150" Width="250" Visibility="Visible"></Image>
+            <Image x:Name="img_Watermark" Height="150" Visibility="Visible"></Image>
         </StackPanel>
-        <StackPanel>
-            <Label Margin="0,90,0,0">Результат</Label>
-            <Image x:Name="img_Result" Height="150"  Width="237" Visibility="Visible" ></Image>
+        <StackPanel Width="385">
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label Margin="0,0,0,0">Прозрачность:</Label>
+                <TextBox x:Name="txb_Opacity" Margin="0,0,0,0" Width="70"/>
+                <Label Margin="0,0,0,0">Позиция:</Label>
+                <Label Margin="0,0,0,0">x =</Label>
+                <TextBox x:Name="txb_X" Margin="0,0,0,0" Width="50"/>
+                <Label Margin="0,0,0,0">y =</Label>
+                <TextBox x:Name="txb_Y" Margin="0,0,0,0" Width="50"/>
+            </StackPanel>
+            <Button x:Name="btn_Impose" Width="200" Margin="0,0,0,5" Click="btn_Impose_Click">Наложить</Button>
+            <Button x:Name="btn_Save" Width="200" Click="btn_Save_Click">Сохранить</Button>
+            <Label Margin="0,0,0,0">Результат</Label>
+            <Image x:Name="img_Result" Height="284" Margin="10,0,0,0"  Visibility="Visible" ></Image>
         </StackPanel>
     </StackPanel>
 </Window>
