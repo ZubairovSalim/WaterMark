@@ -22,3 +22,7 @@ C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\bin\Debug\Spi
 C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\bin\Debug\Microsoft.mshtml.dll
 C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\bin\Debug\Spire.Doc.xml
 C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\bin\Debug\Spire.License.xml
+C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\obj\Debug\watermark_Word.g.cs
+C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\obj\Debug\watermark_Word.baml
+C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\obj\Debug\watermark_text_Word.g.cs
+C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\obj\Debug\watermark_text_Word.baml

@@ -71,6 +71,12 @@
     <Compile Include="watermark_Text.xaml.cs">
       <DependentUpon>watermark_Text.xaml</DependentUpon>
     </Compile>
+    <Compile Include="watermark_text_Word.xaml.cs">
+      <DependentUpon>watermark_text_Word.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="watermark_Word.xaml.cs">
+      <DependentUpon>watermark_Word.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -88,6 +94,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="watermark_Text.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="watermark_text_Word.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="watermark_Word.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

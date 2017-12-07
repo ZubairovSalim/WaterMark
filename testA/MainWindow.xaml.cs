@@ -39,5 +39,17 @@ namespace testA
             watermark_Image Img_Form = new watermark_Image();
             Img_Form.Show();
         }
+
+        private void btn_text_DW_Click(object sender, RoutedEventArgs e)
+        {
+            watermark_Word Word_Form = new watermark_Word();
+            Word_Form.Show();
+        }
+
+        private void btn_text_TW_Click(object sender, RoutedEventArgs e)
+        {
+            watermark_text_Word text_Word_Form = new watermark_text_Word();
+            text_Word_Form.Show();
+        }
     }
 }

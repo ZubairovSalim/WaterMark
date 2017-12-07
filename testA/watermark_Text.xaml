@@ -54,6 +54,5 @@
             <Label Margin="0,0,0,0">Результат</Label>
             <Image x:Name="img_Result" Height="281" Visibility="Visible" Margin="10,0" />
         </StackPanel>
-
     </StackPanel>
 </Window>
