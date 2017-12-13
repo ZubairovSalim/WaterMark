@@ -26,3 +26,32 @@ C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\obj\Debug\wat
 C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\obj\Debug\watermark_Word.baml
 C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\obj\Debug\watermark_text_Word.g.cs
 C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\obj\Debug\watermark_text_Word.baml
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\bin\Debug\testA.exe.config
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\bin\Debug\testA.exe
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\bin\Debug\testA.pdb
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\bin\Debug\Spire.Doc.dll
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\bin\Debug\Spire.License.dll
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\bin\Debug\Spire.Pdf.dll
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\bin\Debug\Microsoft.mshtml.dll
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\bin\Debug\Spire.Doc.xml
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\bin\Debug\Spire.License.xml
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA.csprojResolveAssemblyReference.cache
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\MainWindow.g.cs
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\watermark_Image.g.cs
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\watermark_Text.g.cs
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\watermark_text_Word.g.cs
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\watermark_Word.g.cs
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\App.g.cs
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA_MarkupCompile.cache
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA_MarkupCompile.lref
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\MainWindow.baml
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\watermark_Image.baml
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\watermark_Text.baml
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\watermark_text_Word.baml
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\watermark_Word.baml
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA.g.resources
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA.Properties.Resources.resources
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA.csproj.GenerateResource.Cache
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA.csproj.CoreCompileInputs.cache
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA.exe
+C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA.pdb

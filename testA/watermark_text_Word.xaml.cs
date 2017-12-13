@@ -43,6 +43,7 @@ namespace testA
             txtWatermark.Layout = WatermarkLayout.Diagonal;
             document = new Document(document_address);
             document.Watermark = txtWatermark;
+            MessageBox.Show("Водяной узнак успешно наложен");
         }
 
         private void btn_SaveDocument_Click(object sender, RoutedEventArgs e)

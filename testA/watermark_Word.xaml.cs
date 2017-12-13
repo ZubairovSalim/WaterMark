@@ -54,7 +54,8 @@ namespace testA
             picture.Picture = Image.FromFile(image_address); 
             picture.Scaling = 250;
             document = new Document(document_address);
-            document.Watermark = picture;            
+            document.Watermark = picture;
+            MessageBox.Show("Водяной узнак успешно наложен");
         }
 
         private void btn_SaveDocument_Click(object sender, RoutedEventArgs e)

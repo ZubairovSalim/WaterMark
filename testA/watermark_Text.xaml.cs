@@ -45,7 +45,7 @@ namespace testA
 
             StringFormat strFormatter = new StringFormat();
 
-            SolidBrush transBrush = new SolidBrush(Color.FromArgb(Convert.ToByte(txb_Opacity.Text),Selected_Color.R, Selected_Color.G, Selected_Color.B));
+            SolidBrush transBrush = new SolidBrush(Color.FromArgb(Convert.ToByte(Convert.ToInt32(txb_Opacity.Text) * 255 / 100),Selected_Color.R, Selected_Color.G, Selected_Color.B));
 
             for(int i = -200;i< BT.Height;i+=200)
             {

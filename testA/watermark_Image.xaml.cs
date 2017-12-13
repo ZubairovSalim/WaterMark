@@ -30,7 +30,7 @@ namespace testA
             var upgradedbmp = bmp.Clone(rect, PixelFormat.Format32bppArgb);
             bmp.Dispose();
 
-            byte ALPHA = Convert.ToByte(txb_Opacity.Text);
+            byte ALPHA = Convert.ToByte(Convert.ToInt32(txb_Opacity.Text)*255/100);
 
             Color clr;
             for (int py = 0; py < upgradedbmp.Height; py++)
