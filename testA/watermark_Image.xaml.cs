@@ -47,7 +47,11 @@ namespace testA
             //Copy onto the result image.
             using (Graphics gr = Graphics.FromImage(result_bm))
             {
-                gr.DrawImage(upgradedbmp, x, y);
+                gr.TranslateTransform(Convert.ToInt32(txb_X.Text) + watermark_bm.Width / 2, result_bm.Height - Convert.ToInt32(txb_Y.Text) - watermark_bm.Height / 2);
+                gr.RotateTransform(-Convert.ToInt32(txb_Angle.Text));               
+                gr.DrawImage(upgradedbmp, -watermark_bm.Width / 2, -watermark_bm.Height / 2);
+                gr.RotateTransform(Convert.ToInt32(txb_Angle.Text));
+                gr.TranslateTransform(-Convert.ToInt32(txb_X.Text) - watermark_bm.Width / 2, -result_bm.Height + Convert.ToInt32(txb_Y.Text) + watermark_bm.Height / 2);
             }
 
             return result_bm;

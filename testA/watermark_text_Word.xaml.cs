@@ -7,6 +7,7 @@ using System.IO;
 using forms = System.Windows.Forms;//для исключения конфликтов имен
 using System.Drawing.Imaging;
 using Spire.Doc.Documents;
+using System.Reflection;
 
 namespace testA
 {
@@ -36,7 +37,7 @@ namespace testA
         }
 
         private void btn_Impose_Click(object sender, RoutedEventArgs e)
-        {
+        {       
             TextWatermark txtWatermark = new TextWatermark();
             txtWatermark.Text = txb_Watermark.Text;
             txtWatermark.FontSize = 90;
@@ -55,8 +56,22 @@ namespace testA
             if (save.ShowDialog() == forms.DialogResult.OK)
             {
                 document_address = save.FileName;
-                document.SaveToFile(document_address);
+                document.SaveToFile(document_address, FileFormat.Docx);
+
+                Microsoft.Office.Interop.Word.Application app = new Microsoft.Office.Interop.Word.Application();
+                app.Visible = false;
+                Microsoft.Office.Interop.Word.Document doc = app.Documents.Open(document_address);
+                Microsoft.Office.Interop.Word.Range r = doc.Content;
+                r.Find.ClearFormatting();
+                r.Find.Execute(FindText: "Evaluation Warning: The document was created with Spire.Doc for .NET.", ReplaceWith: "");
+                doc.SaveAs(document_address);
+
+                doc.Close();
+                app.Quit();
+                
+                MessageBox.Show("Документ успешно сохранен");
             }
         }
     }
 }
+

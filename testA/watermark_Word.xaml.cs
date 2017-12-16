@@ -68,6 +68,19 @@ namespace testA
             {
                 document_address = save.FileName;
                 document.SaveToFile(document_address);
+
+                Microsoft.Office.Interop.Word.Application app = new Microsoft.Office.Interop.Word.Application();
+                app.Visible = false;
+                Microsoft.Office.Interop.Word.Document doc = app.Documents.Open(document_address);
+                Microsoft.Office.Interop.Word.Range r = doc.Content;
+                r.Find.ClearFormatting();
+                r.Find.Execute(FindText: "Evaluation Warning: The document was created with Spire.Doc for .NET.", ReplaceWith: "");
+                doc.SaveAs(document_address);
+
+                doc.Close();
+                app.Quit();
+
+                MessageBox.Show("Документ успешно сохранен");
             }
         }    
     }

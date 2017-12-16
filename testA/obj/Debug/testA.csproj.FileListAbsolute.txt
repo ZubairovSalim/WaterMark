@@ -55,3 +55,4 @@ C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\test
 C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA.csproj.CoreCompileInputs.cache
 C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA.exe
 C:\Users\Salim\Desktop\sali\ОГУ\ОИБ\Лаб7\WaterMark\testA\obj\Debug\testA.pdb
+C:\Users\Mr.Sali\Documents\Visual Studio 2017\Projects\testA\testA\obj\Debug\testA.csproj.ResolveComReference.cache

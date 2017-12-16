@@ -18,18 +18,22 @@
         <StackPanel Width="385">
             <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
                 <Label Margin="0,0,0,0">Прозрачность:</Label>
-                <TextBox x:Name="txb_Opacity" Margin="0,0,0,0" Width="70"/>
+                <TextBox x:Name="txb_Opacity" Margin="0,0,0,0" Width="75"/>
                 <Label>%</Label>
-                <Label Margin="0,0,0,0">Позиция:</Label>
-                <Label Margin="0,0,0,0">x =</Label>
-                <TextBox x:Name="txb_X" Margin="0,0,0,0" Width="50"/>
-                <Label Margin="0,0,0,0">y =</Label>
-                <TextBox x:Name="txb_Y" Margin="0,0,0,0" Width="50"/>
+                <Label Margin="5,0,5,0">Угол наклона:</Label>
+                <TextBox x:Name="txb_Angle" Margin="15,0,0,0" Width="75"></TextBox>
+                <Label>°</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
+                <Label Margin="0,0,0,0">Позиция по x: </Label>
+                <TextBox x:Name="txb_X" Margin="4,0,0,0" Width="75"/>
+                <Label Margin="40,0,0,0">Позиция по y: </Label>
+                <TextBox x:Name="txb_Y" Margin="4,0,0,0" Width="75"/>
             </StackPanel>
             <Button x:Name="btn_Impose" Width="200" Margin="0,0,0,5" Click="btn_Impose_Click">Наложить</Button>
             <Button x:Name="btn_Save" Width="200" Click="btn_Save_Click">Сохранить</Button>
             <Label Margin="0,0,0,0">Результат</Label>
-            <Image x:Name="img_Result" Height="284" Margin="10,0,0,0"  Visibility="Visible" ></Image>
+            <Image x:Name="img_Result" Height="245" Margin="10,0,0,0"  Visibility="Visible" ></Image>
         </StackPanel>
     </StackPanel>
 </Window>

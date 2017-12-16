@@ -36,39 +36,71 @@ namespace testA
 
             img_Image.Source = new BitmapImage(new Uri(image_address));
             img_Image.Visibility = Visibility.Visible;
+
+            BT = new Bitmap(image_address);
+            lb_Size.Content = "Длина = " + BT.Height + " Ширина = " + BT.Width;
         }
 
         private void btn_Impose_Click(object sender, RoutedEventArgs e)
         {
-            BT = new Bitmap(image_address);
+            BT = new Bitmap(image_address);            
             Graphics original_Image = Graphics.FromImage(BT);
 
             StringFormat strFormatter = new StringFormat();
 
             SolidBrush transBrush = new SolidBrush(Color.FromArgb(Convert.ToByte(Convert.ToInt32(txb_Opacity.Text) * 255 / 100),Selected_Color.R, Selected_Color.G, Selected_Color.B));
 
-            for(int i = -200;i< BT.Height;i+=200)
+            SizeF MySize = original_Image.MeasureString(txb_Watermark.Text, new Font((cmb_Name.SelectedItem as ComboBoxItem).Content.ToString(), Convert.ToInt32(txb_Size.Text)));
+
+            if (rb_Single.IsChecked == true)
             {
-                for(int j = -200;j<BT.Width;j+=200)
+                original_Image.TranslateTransform(Convert.ToInt32(txb_X.Text) + MySize.Width / 2, BT.Height - Convert.ToInt32(txb_Y.Text) - MySize.Height / 2);
+                original_Image.RotateTransform(-Convert.ToInt32(txb_Angle.Text));
+                original_Image.DrawString(txb_Watermark.Text, new Font((cmb_Name.SelectedItem as ComboBoxItem).Content.ToString(), Convert.ToInt32(txb_Size.Text)), transBrush, -MySize.Width / 2, -MySize.Height / 2);
+                original_Image.RotateTransform(Convert.ToInt32(txb_Angle.Text));
+                original_Image.TranslateTransform(-Convert.ToInt32(txb_X.Text) - MySize.Width / 2, -BT.Height + Convert.ToInt32(txb_Y.Text) + MySize.Height / 2);
+            }
+            else
+            {
+                int step = Convert.ToInt32(txb_Step.Text);
+
+                if(ch_Mirror.IsChecked==true)
                 {
-                    if (i == j)
+                    for (int i = 0; i < BT.Height; i += step)
                     {
-                        DrawDigonalString(original_Image, txb_Watermark.Text, new Font(txb_Name.Text, Convert.ToInt32(txb_Size.Text)), transBrush, new PointF(i, j), -45);
+                        for (int j = 0; j < BT.Width; j += step)
+                        {
+                            if (i == j)
+                            {                               
+                                original_Image.TranslateTransform(i + MySize.Width / 2, BT.Height - j - MySize.Height / 2);
+                                original_Image.RotateTransform(-Convert.ToInt32(txb_Angle.Text));
+                                original_Image.DrawString(txb_Watermark.Text, new Font((cmb_Name.SelectedItem as ComboBoxItem).Content.ToString(), Convert.ToInt32(txb_Size.Text)), transBrush, -MySize.Width / 2, -MySize.Height / 2);
+                                original_Image.RotateTransform(Convert.ToInt32(txb_Angle.Text));
+                                original_Image.TranslateTransform(-i - MySize.Width / 2, - BT.Height + j + MySize.Height / 2);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < BT.Height; i += step)
+                    {
+                        for (int j = 0; j < BT.Width; j += step)
+                        {
+                            if (i == j)
+                            {
+                                original_Image.TranslateTransform(i + MySize.Width / 2, j + MySize.Height / 2);
+                                original_Image.RotateTransform(-Convert.ToInt32(txb_Angle.Text));
+                                original_Image.DrawString(txb_Watermark.Text, new Font((cmb_Name.SelectedItem as ComboBoxItem).Content.ToString(), Convert.ToInt32(txb_Size.Text)), transBrush, -MySize.Width / 2, -MySize.Height / 2);
+                                original_Image.RotateTransform(Convert.ToInt32(txb_Angle.Text));
+                                original_Image.TranslateTransform(-i - MySize.Width / 2, -j - MySize.Height / 2);
+                            }
+                        }
                     }
                 }
             }
-            
-            img_Result.Source = watermark_Image.BitmapToImageSource(BT);
-        }
 
-        void DrawDigonalString(Graphics G, string S, Font F, Brush B, PointF P, int Angle)
-        {
-            SizeF MySize = G.MeasureString(S, F);
-            G.TranslateTransform(P.X + MySize.Width / 2, P.Y + MySize.Height / 2);
-            G.RotateTransform(Angle);
-            G.DrawString(S, F, B, new PointF(-MySize.Width / 2, -MySize.Height / 2));
-            G.RotateTransform(-Angle);
-            G.TranslateTransform(-P.X - MySize.Width / 2, -P.Y - MySize.Height / 2);
+            img_Result.Source = watermark_Image.BitmapToImageSource(BT);
         }
 
         private void btn_Color_Click(object sender, RoutedEventArgs e)
@@ -98,5 +130,30 @@ namespace testA
                 BT.Save(result_adress);
             }
         }
+
+        private void rb_Checked(object sender, RoutedEventArgs e)
+        {
+            if((sender as RadioButton).Name=="rb_Single")
+            {
+                st_Single.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                st_Multiple.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void rb_Unchecked(object sender, RoutedEventArgs e)
+        {
+            if ((sender as RadioButton).Name == "rb_Single")
+            {
+                st_Single.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                st_Multiple.Visibility = Visibility.Collapsed;
+            }
+        }
+
     }
 }
